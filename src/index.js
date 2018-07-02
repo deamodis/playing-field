@@ -1,6 +1,6 @@
 import Field from './components/field.js';
 import StartTheGame from './components/gameStart.js';
-
+import openWin from './components/modalWindow.js'
 
 
 let input = document.getElementById('time');

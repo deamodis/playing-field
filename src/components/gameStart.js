@@ -1,4 +1,5 @@
 export default StartTheGame;
+import openWin from "./modalWindow.js"
 
 let gameStarted = false; // меняем значение этой переменной по клику
 let timeForGame;
@@ -21,6 +22,9 @@ function start(event){
         gameStarted = false;
 
         dispatchEvent();
+
+        scorePeople.innerHTML === "10" ? openWin("Player") : openWin("Computer");
+
         return;
     }
     gameStarted = true;
