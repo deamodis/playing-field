@@ -1,9 +1,21 @@
+function onClickHandler(event){
+    let target = event.target;
 
+    if(target.closest('.cell')){
+        alert('popal')
+    }
+}
 
 export default class Field{ // класс, который создаёт только квадратное поле
-    constructor(size){
+    constructor(size, placeForTheField){
         this.sizeOfRow = size; // количество ячеек одного ряда по горизонтали/вертикали
         this.size = size * size; // количество ячеек всего поля
+        this.placeForTheField = placeForTheField;
+    }
+
+
+    _addHandler(elem){
+        elem.addEventListener('click', onClickHandler);
     }
 
 
@@ -22,7 +34,12 @@ export default class Field{ // класс, который создаёт тол�
             fragment.appendChild(cell);
         }
 
-        return fragment;
+
+
+        this.placeForTheField.appendChild(fragment);
+        this._addHandler(this.placeForTheField);
+
+        return this.placeForTheField;
     }
 
 }
