@@ -1,3 +1,5 @@
+export {Field}
+
 let statusOfTheGame;
 let scorePeople = document.getElementById('people');
 
@@ -17,7 +19,7 @@ function onSetStatusGame(event) {
 }
 
 
-export default class Field { // класс, который создаёт только квадратное поле
+ class Field { // класс, который создаёт только квадратное поле
     constructor(size, placeForTheField) {
         this.sizeOfRow = size; // количество ячеек одного ряда по горизонтали/вертикали
         this.size = size * size; // количество ячеек всего поля
@@ -55,3 +57,4 @@ export default class Field { // класс, который создаёт тол
     }
 
 }
+

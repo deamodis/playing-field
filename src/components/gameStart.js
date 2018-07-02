@@ -1,5 +1,5 @@
-export default StartTheGame;
-import openWin from "./modalWindow.js"
+export  {StartTheGame};
+import {openWin} from "./modalWindow.js"
 
 let gameStarted = false; // меняем значение этой переменной по клику
 let timeForGame;

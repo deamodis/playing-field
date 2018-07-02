@@ -26,4 +26,4 @@ overflow.onclick = function() {
     overflow.remove();
 };
 
-export default openWin
+export  {openWin}

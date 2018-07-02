@@ -1,5 +1,5 @@
-import Field from './components/field.js';
-import StartTheGame from './components/gameStart.js';
+import {Field} from './components/field.js';
+import {StartTheGame} from './components/gameStart.js';
 
 let input = document.getElementById('time');
 let startButton = document.getElementById("start");
