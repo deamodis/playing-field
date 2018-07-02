@@ -10,15 +10,14 @@ let field = document.getElementById('PlaceForTheField');
 let timerId;
 
 
-function StartTheGame(elem, time){
+function StartTheGame(elem, time) {
     elem.onclick = start;
     timeForGame = time;
-    // this.gameStarted = gameStarted;
 }
 
 
-function start(event){
-    if(scorePeople.innerHTML === "10" || scoreComputer.innerHTML === "10" ){
+function start(event) {
+    if (scorePeople.innerHTML === "10" || scoreComputer.innerHTML === "10") {
         gameStarted = false;
 
         dispatchEvent();
@@ -32,32 +31,26 @@ function start(event){
     dispatchEvent();
 
     let indexCell = Math.floor(Math.random() * 100);
-    let targetCell =  document.getElementById("" + indexCell);
+    let targetCell = document.getElementById("" + indexCell);
 
     targetCell.style.backgroundColor = "yellow";
 
-    timerId = setTimeout( () => {
-        if(targetCell.style.backgroundColor != 'green'){
+    timerId = setTimeout(() => {
+        if (targetCell.style.backgroundColor != 'green') {
 
             targetCell.style.backgroundColor = "red";
             scoreComputer.innerHTML++;
         }
         start()
-        }
-    , timeForGame);
+    }, timeForGame);
 
 }
 
 
-function dispatchEvent(){
+function dispatchEvent() {
     let myEvent = new CustomEvent("changeGameStatus", {
         bubbles: true,
         detail: gameStarted
     });
     field.dispatchEvent(myEvent);
 }
-
-
-
-
-
