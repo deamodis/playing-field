@@ -1,13 +1,21 @@
-let gameStart;
-
+let statusOfTheGame;
+let scorePeople = document.getElementById('people');
 
 function onClickHandler(event){
     let target = event.target;
 
-    if(target.closest('.cell') && gameStart){
-        let currentTime = new Data.getTime();
+    if(target.closest('.cell') && statusOfTheGame){
+        if(target.style.backgroundColor === 'yellow'){
+            target.style.backgroundColor = 'green';
+            scorePeople.innerHTML++;
+        }
     }
 }
+
+function onSetStatusGame(event){
+    statusOfTheGame = event.detail;
+}
+
 
 export default class Field{ // класс, который создаёт только квадратное поле
     constructor(size, placeForTheField){
@@ -20,6 +28,7 @@ export default class Field{ // класс, который создаёт тол�
 
     _addHandler(elem){
         elem.addEventListener('click', onClickHandler);
+        elem.addEventListener('changeGameStatus', onSetStatusGame);
     }
 
 

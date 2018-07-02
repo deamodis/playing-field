@@ -5,10 +5,33 @@
     margin: 1px;
     float:left;
 }
-
+body{
+    text-align: center;
+}
 .clearfix{
     content: "";
     clear: both;
     display: table;
 }
+#PlaceForTheField{
+    margin: 30px auto;
+}
+
+#menu{
+
+
+    display: inline-block;
+
+}
+
+#people{
+    display: inline-block;
+    padding-right:100px;
+}
+
+#computer{
+    display: inline-block;
+
+}
+
 
