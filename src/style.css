@@ -1,0 +1,14 @@
+.cell{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    margin: 1px;
+    float:left;
+}
+
+.clearfix{
+    content: "";
+    clear: both;
+    display: table;
+}
+
