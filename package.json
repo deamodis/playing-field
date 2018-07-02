@@ -1,0 +1,24 @@
+{
+  "name": "playing_field",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deamodis/playing-field.git"
+  },
+  "author": "Vladislav Zhadchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deamodis/playing-field/issues"
+  },
+  "homepage": "https://github.com/deamodis/playing-field#readme"
+}
