@@ -9,5 +9,5 @@ let field = new Field(10, placeForTheField).createField();
 new StartTheGame(startButton, input.value);
 
 input.onchange = function(event) {
-    new StartTheGame(startButton, input.value); // конструктор который навешивает обработчик на кнопку и возвращает состояние игры (начата / завершена)
+    new StartTheGame(startButton, input.value);
 };
